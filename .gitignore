@@ -1,0 +1,9 @@
+*~
+#*#
+project/target
+project/plugins.sbt
+target/
+.idea
+*.jar
+*.tar.gz
+.DS_Store
