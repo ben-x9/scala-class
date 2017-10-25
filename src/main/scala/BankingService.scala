@@ -8,6 +8,7 @@ sealed trait DebitError extends BankingError
 case object NotEnoughMoney extends DebitError
 
 case class Transaction(from: Account, to: Account, money: Money)
+case class AccountState(money: Money, enabled: Boolean)
 
 object BankingService {
   def debit(account: Account, amount: BigDecimal): Either[BankingError, (Account, Money)] = {
@@ -41,5 +42,7 @@ object BankingService {
     } yield Transaction(newFromAccount, newToAccount, money)
   }
 
-  
+  def inquiry(account: Account): AccountState = {
+    AccountState(account.money, account.enabled)
+  }
 }
