@@ -36,10 +36,11 @@ object BankingService {
   }
 
   def transfer(from: Account, amount: BigDecimal, to: Account): Either[BankingError, Transaction] = {
-    for {
-      state1 <- debit(from, amount)
-      state2 <- credit(to, amount)
-    } yield Transaction(state1._1, state2._1, state1._2)
+    debit(from, amount).flatMap {
+      case (_, _) => credit(to, amount)
+    }.map {
+      case (_, money) => Transaction(from, to, money)
+    }
   }
 
   def inquiry(account: Account): AccountState = {
