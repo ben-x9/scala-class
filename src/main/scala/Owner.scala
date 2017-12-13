@@ -1,4 +1,4 @@
-import scalaz._
+/*import scalaz._
 import Scalaz._
 
 case class Owner(
@@ -32,3 +32,4 @@ object Owner {
   val owner2 = ownerCountryLens.set(owner, Country("Indonesia"))
 
 }
+*/

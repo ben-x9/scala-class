@@ -1,5 +1,5 @@
 import scala.util.{Failure, Success, Try}
-
+/*
 case class AccountId(value: String) extends AnyVal
 
 trait Account {
@@ -43,3 +43,4 @@ object CheckingAccount {
     }
   }
 }
+*/

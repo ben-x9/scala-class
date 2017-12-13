@@ -2,7 +2,11 @@ name := "studygroup"
 
 version := "1.0"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.3"
 
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.16"
-        
+libraryDependencies ++= Seq(
+  "org.typelevel" %% "cats-core" % "1.0.0-RC1",
+  "org.typelevel" %% "cats-kernel" % "1.0.0-RC1",
+  "org.typelevel" %% "cats-macros" % "1.0.0-RC1",
+  "org.typelevel" %% "cats-free" % "1.0.0-RC1"
+)

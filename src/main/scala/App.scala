@@ -1,4 +1,4 @@
-
+import scala.concurrent.Future
 
 sealed trait Currency
 case object Yen extends Currency
@@ -8,8 +8,10 @@ case object USD extends Currency
 case class Money(amount: BigDecimal, currency: Currency)
 
 object App {
+
+
   def main(args: Array[String]): Unit = {
-    val res = for {
+    /*val res = for {
       account <- CheckingAccount.validate(
         id = AccountId("toto"),
         owner = Owner(
@@ -37,6 +39,8 @@ object App {
           println("Not enough money")
         case AccountDisabled =>
           println("Account disabled")
-      }
+      }*/
+
     }
+
 }

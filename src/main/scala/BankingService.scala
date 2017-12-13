@@ -1,7 +1,7 @@
 /**
   * Created by jalal on 17/10/25.
   */
-
+/*
 sealed trait BankingError
 sealed trait CreditError extends BankingError
 
@@ -57,3 +57,4 @@ object BankingService {
   }
 }
 
+*/
